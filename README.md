@@ -4,15 +4,13 @@ A clean and responsive task management app built with **React + TypeScript + Vit
 
 ## 🚀 Live Demo
 
-🌐 [Check it out on Vercel](https://tasks-tracker-mauve.vercel.app)
+🌐 [Check it out on Vercel](https://tasks-tracker-mu.vercel.app/)
 
 ## ✨ Features
 
 - Add and delete tasks
 - Mark tasks as complete/incomplete
-- Dark mode toggle
 - Persistent data with `localStorage`
-- Smooth animations with Tailwind CSS
 - Mobile-friendly and responsive
 
 ## 🛠️ Tech Stack
@@ -29,7 +27,10 @@ src/
 │ ├── AddTaskForm.tsx
 │ └── TaskList.tsx
 ├── App.tsx
-├── index.css
+├── styles/
+│ ├── AddTaskForm.css
+│ └── TaskList.css
+│ └── App.css
 └── main.tsx
 
 
@@ -38,7 +39,7 @@ src/
 - How to structure a reusable React app with components
 - Using `localStorage` for persistent frontend data
 - Practicing the Feynman technique to understand concepts
-- Adding UI polish with dark mode and transitions
+- Adding UI polish with transitions
 
 ## 🔮 Future Improvements
 
@@ -46,10 +47,6 @@ src/
 - Sort/filter functionality
 - Drag-and-drop task reordering
 - Backend integration (Firebase or Supabase)
-
-## 📸 Screenshots
-
-*Include 1–2 screenshots or a GIF here*
 
 ---
 
