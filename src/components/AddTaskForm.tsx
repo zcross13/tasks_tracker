@@ -1,11 +1,6 @@
 import {useState} from 'react'
+import type { Task } from '../types'
 import '../styles/AddTaskForm.css'
-
-interface Task {
-    id: number;
-    text: string;
-    completed: boolean;
-}
 
 interface AddTaskFormProps {
     tasks: Task[];

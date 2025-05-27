@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react'
 import TaskList from './components/TaskList'
 import AddTaskForm from './components/AddTaskForm'
-import './styles/App.css'
+import type { Task } from './types'
 
-interface Task {
-    id: number;
-    text: string;
-    completed: boolean;
-}
+import './styles/App.css'
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>(() => {

@@ -1,12 +1,6 @@
 import '../styles/TaskList.css'
 import PomodoroTimer from './PomodoroTimer'
-
-interface Task {
-    id: number;
-    text: string;
-    completed: boolean;
-    usePomodoro: boolean;
-}
+import type { Task } from '../types'
 
 interface TaskListProps {
     tasks: Task[];
