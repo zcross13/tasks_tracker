@@ -1,9 +1,11 @@
 import '../styles/TaskList.css'
+import PomodoroTimer from './PomodoroTimer'
 
 interface Task {
     id: number;
     text: string;
     completed: boolean;
+    usePomodoro: boolean;
 }
 
 interface TaskListProps {
@@ -16,6 +18,13 @@ function TaskList({tasks, setTasks, handleToggle}: TaskListProps){
     const handleDelete = (id: number) => {
         setTasks(tasks.filter((task) => task.id !== id))
     }
+
+    const handlePomodoroToggle = (id: number) => {
+        setTasks(tasks.map(task => 
+          task.id === id ? { ...task, usePomodoro: !task.usePomodoro } : task
+        ));
+      };
+      
 
     return(
         <ul className="task-list">
@@ -31,6 +40,16 @@ function TaskList({tasks, setTasks, handleToggle}: TaskListProps){
                         <label htmlFor={`task-${task.id}`}>
                             {task.text}
                         </label>
+
+                        {/* Pomodoro Timer */}
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={task.usePomodoro}
+                                onChange={() => handlePomodoroToggle(task.id)}
+                                />
+                            Use Pomodoro
+                        </label>
                     </div>
                     <button 
                         onClick={() => handleDelete(task.id)}
@@ -38,6 +57,8 @@ function TaskList({tasks, setTasks, handleToggle}: TaskListProps){
                     >
                         ❌
                     </button>
+                      {/* Conditionally render the Pomodoro timer */}
+                      {task.usePomodoro && <PomodoroTimer taskTitle={task.text} />}
                 </li>
             ))}
         </ul>
