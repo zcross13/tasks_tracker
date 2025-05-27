@@ -9,7 +9,15 @@ function App() {
   const [tasks, setTasks] = useState<Task[]>(() => {
     // Initialize state from localStorage
     const savedTasks = localStorage.getItem('tasks')
-    return savedTasks ? JSON.parse(savedTasks) : []
+    if (savedTasks) {
+      // Ensure all tasks have the usePomodoro property
+      const parsedTasks = JSON.parse(savedTasks)
+      return parsedTasks.map((task: any) => ({
+        ...task,
+        usePomodoro: task.usePomodoro ?? false
+      }))
+    }
+    return []
   })
 
   const handleToggle = (idToToggle: number) => {
