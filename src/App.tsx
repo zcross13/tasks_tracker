@@ -5,6 +5,7 @@ import type { Task } from './types'
 
 import './styles/App.css'
 
+// Main application component
 function App() {
   const [tasks, setTasks] = useState<Task[]>(() => {
     // Initialize state from localStorage
