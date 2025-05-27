@@ -24,8 +24,6 @@ function App() {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
 
-  
-
   return (
     <div className="app">
       <h1 className='app-title'>Task Tracker ✅</h1>
