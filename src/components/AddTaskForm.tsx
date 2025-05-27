@@ -17,13 +17,11 @@ function AddTaskForm({tasks, setTasks}: AddTaskFormProps){
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log('Submitting new task with text:', taskText)
-        console.log('Current tasks before adding:', tasks)
-
         const newTask = {
             id: Date.now(),
             text: taskText, 
-            completed: false
+            completed: false,
+            usePomodoro: false,
         }
         console.log('Created new task:', newTask)
 

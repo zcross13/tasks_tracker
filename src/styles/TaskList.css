@@ -66,6 +66,37 @@
     background-color: #fee2e2;
     color: #b91c1c;
 }
+
+/* Pomodoro Timer Styling */
+.pomodoro-timer {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.pomodoro-timer h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.pomodoro-timer button {
+  margin: 4px;
+  font-size: 0.9rem;
+  background: #ffcc00;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.pomodoro-timer button:hover {
+  background: #e6b800;
+}
   
 /* Fade in each task */
 li {
